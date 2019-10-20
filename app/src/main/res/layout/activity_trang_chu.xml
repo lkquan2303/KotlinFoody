@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.TrangChuActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/background"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        >
+
+        <ImageView
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tools:srcCompat="@drawable/chuf" />
+        <RadioGroup
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:textColor="@color/white"
+                android:checked="true"
+                android:button="@android:color/transparent"
+                android:text="Địa điểm"
+                android:padding="10dp"
+                android:background="@drawable/customdario_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <RadioButton
+                android:background="@drawable/customradio_angi"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:button="@android:color/transparent"
+                android:text="Ăn gì đây"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <ImageView
+            android:layout_marginRight="20dp"
+            android:layout_gravity="right"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            tools:srcCompat="@android:drawable/ic_menu_compass" />
+    </androidx.appcompat.widget.Toolbar>
+
+</LinearLayout>

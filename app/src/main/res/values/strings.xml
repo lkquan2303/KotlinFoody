@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FoodyKotlin</string>
+    <string name="tittle">Foody</string>
+    <string name="facebook_app_id">1711542638976603</string>
+    <string name="fb_login_protocol_scheme">fb1711542638976603</string>
+
+</resources>
