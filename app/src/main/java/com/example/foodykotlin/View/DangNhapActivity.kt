@@ -44,7 +44,6 @@ class DangNhapActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailed
             var intent = Intent(this, TrangChuActivity :: class.java)
             startActivity(intent)
             FirebaseAuth.getInstance().signOut()
-            pd.dismiss()
         }
         else
         {
@@ -61,8 +60,9 @@ class DangNhapActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailed
         when (id) {
             R.id.btdngoogle -> DangNhapGoogle(apiClient)
             R.id.btdnfb -> DangNhapFaceBook()
-            R.id.tvdk -> chuyenmanhinhdk()
+            R.id.tvdk -> ChuyenManHinhdk()
             R.id.btdangnhap -> DangNhap()
+            R.id.textView2 -> ChuyenManHinhqmk()
         }
     }
     override fun onConnectionFailed(p0: ConnectionResult) {
@@ -86,6 +86,7 @@ class DangNhapActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailed
         tvdk.setOnClickListener(this)
         btdangnhap.setOnClickListener(this)
         TaoClientDangNhapGoogle()
+        tvquenmk.setOnClickListener (this)
 
     }
     private fun TaoClientDangNhapGoogle() {
@@ -164,9 +165,14 @@ class DangNhapActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailed
             }
         })
     }
-    private fun chuyenmanhinhdk()
+    private fun ChuyenManHinhdk()
     {
         var intent = Intent(this, DangKyActivity::class.java )
+        startActivity(intent)
+    }
+    private fun ChuyenManHinhqmk()
+    {
+        var intent = Intent(this, QuenMatKhauActivity::class.java )
         startActivity(intent)
     }
     private fun DangNhap( )

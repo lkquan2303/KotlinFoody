@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.DangKyActivity"></activity>
+        <activity android:name=".View.Flagment.Flagment_angi"></activity>
+        <activity android:name=".View.Flagment.flagment_odau" />
+        <activity android:name=".View.QuenMatKhauActivity" />
+        <activity android:name=".View.DangKyActivity" />
         <activity android:name=".View.TrangChuActivity" />
         <activity android:name=".View.DangNhapActivity" />
         <activity android:name=".View.FlashScreen">

@@ -7,5 +7,8 @@
     <color name="background">#21AF2B</color>
     <color name="white">#FFFFFF</color>
     <color name="fb">#4254FA</color>
+    <color name="black">#030303</color>
+    <color name="background_trangchu">#CCC</color>
+    <color name="red">#FF0808</color>
 
 </resources>
