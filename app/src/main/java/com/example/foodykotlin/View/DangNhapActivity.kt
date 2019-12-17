@@ -26,6 +26,7 @@ import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.OnFailureListener
 import com.google.firebase.auth.FacebookAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -43,7 +44,7 @@ class DangNhapActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailed
         {
             var intent = Intent(this, TrangChuActivity :: class.java)
             startActivity(intent)
-            FirebaseAuth.getInstance().signOut()
+//            FirebaseAuth.getInstance().signOut()
         }
         else
         {
@@ -62,7 +63,7 @@ class DangNhapActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailed
             R.id.btdnfb -> DangNhapFaceBook()
             R.id.tvdk -> ChuyenManHinhdk()
             R.id.btdangnhap -> DangNhap()
-            R.id.textView2 -> ChuyenManHinhqmk()
+            R.id.tvquenmk -> ChuyenManHinhqmk()
         }
     }
     override fun onConnectionFailed(p0: ConnectionResult) {
@@ -81,13 +82,13 @@ class DangNhapActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailed
         super.onCreate(savedInstanceState)
         FacebookSdk.sdkInitialize(applicationContext)
         setContentView(R.layout.activity_dang_nhap_activity)
+        pd = ProgressDialog(this)
         btdngoogle.setOnClickListener(this)
         btdnfb.setOnClickListener(this)
         tvdk.setOnClickListener(this)
         btdangnhap.setOnClickListener(this)
         TaoClientDangNhapGoogle()
         tvquenmk.setOnClickListener (this)
-
     }
     private fun TaoClientDangNhapGoogle() {
         val signInOptions = GoogleSignInOptions.Builder()
